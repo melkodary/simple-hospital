@@ -1,0 +1,57 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_package = "de.melkodary.simple.hospital.grpc.lib";
+
+service HospitalService {
+  rpc CreateHospital(HospitalRequest) returns (HospitalResponse) {}
+  rpc UpdateHospital(HospitalRequest) returns (HospitalResponse) {}
+  rpc DeleteHospital(HospitalRequest) returns (EmptyResponse) {}
+  rpc CreatePatient(PatientRequest) returns (PatientResponse) {}
+  rpc UpdatePatient(PatientRequest) returns (PatientResponse) {}
+  rpc DeletePatient(PatientRequest) returns (EmptyResponse) {}
+  rpc RegisterPatientInHospital(PatientHospitalRegistrationRequest) returns (EmptyResponse) {}
+  rpc ListAllPatientsOfHospital(HospitalRequest) returns (PatientListResponse) {}
+  rpc ListAllHospitalsOfPatient(PatientRequest) returns (HospitalListResponse) {}
+}
+
+message HospitalRequest {
+  int64 id = 1;
+  string name = 2;
+  string address = 3;
+}
+
+message HospitalResponse {
+  int64 id = 1;
+  string name = 2;
+  string address = 3;
+}
+
+message PatientRequest {
+  int64 id = 1;
+  string name = 2;
+  string birthdate = 3;
+  string sex = 4;
+}
+
+message PatientResponse {
+  int64 id = 1;
+  string name = 2;
+  string birthdate = 3;
+  string sex = 4;
+}
+
+message PatientHospitalRegistrationRequest {
+  int64 patientId = 1;
+  int64 hospitalId = 2;
+}
+
+message EmptyResponse {}
+
+message PatientListResponse {
+  repeated PatientResponse patients = 1;
+}
+
+message HospitalListResponse {
+  repeated HospitalResponse hospitals = 1;
+}
