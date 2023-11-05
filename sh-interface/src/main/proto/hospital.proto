@@ -1,8 +1,9 @@
 syntax = "proto3";
 
 option java_multiple_files = true;
-option java_package = "de.melkodary.simple.hospital.grpc.lib";
+option java_package = "de.melkodary.sh.grpc.lib";
 
+// TODO split into two grpc
 service HospitalService {
   rpc CreateHospital(HospitalRequest) returns (HospitalResponse) {}
   rpc UpdateHospital(HospitalRequest) returns (HospitalResponse) {}
@@ -30,15 +31,13 @@ message HospitalResponse {
 message PatientRequest {
   int64 id = 1;
   string name = 2;
-  string birthdate = 3;
-  string sex = 4;
+  string sex = 3;
 }
 
 message PatientResponse {
   int64 id = 1;
   string name = 2;
-  string birthdate = 3;
-  string sex = 4;
+  string sex = 3;
 }
 
 message PatientHospitalRegistrationRequest {

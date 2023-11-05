@@ -25,8 +25,6 @@ public class Patient {
     @Column(name="name", nullable = false)
     private String name;
 
-    private String birthdate;
-
     @Enumerated(EnumType.STRING)
     private Patient.SEX sex;
 
