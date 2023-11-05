@@ -12,7 +12,6 @@ import static org.junit.jupiter.api.Assertions.*;
 import java.util.List;
 
 @SpringBootTest
-@Sql(scripts = "/data.sql")
 public class HospitalServiceTest {
 
     @Autowired

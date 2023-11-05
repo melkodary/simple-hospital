@@ -26,6 +26,7 @@ public class Patient {
     private String name;
 
     @Enumerated(EnumType.STRING)
+    @Column(name = "sex")
     private Patient.SEX sex;
 
     @ManyToMany(mappedBy = "patients")
