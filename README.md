@@ -9,3 +9,15 @@ A simple service that utilizes gRPC.
 - Register a patient in a hospital
 - List all patients of a hospital
 - List all hospitals in which a patient has been registered
+
+
+## Project
+
+It is a multi-module project containing:
+ - [x] The interface - defines the protocol
+ - [x] Server - defines the business logic and manages the database
+ - [ ] Client - Makes requests to the server to add, modify & delete entities.
+
+### Installation
+
+Run `mvn -pl sh-interface,sh-server clean install`
