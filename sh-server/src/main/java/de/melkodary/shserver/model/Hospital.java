@@ -1,4 +1,4 @@
-package de.melkodary.model;
+package de.melkodary.shserver.model;
 
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;

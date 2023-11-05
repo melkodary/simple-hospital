@@ -17,8 +17,8 @@
     </parent>
 
     <modules>
-        <module>simple-hospital-interface</module>
-        <module>simple-hospital-server</module>
+        <module>sh-interface</module>
+        <module>sh-server</module>
     </modules>
 
 </project>

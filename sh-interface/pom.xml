@@ -9,7 +9,8 @@
         <version>1.0-SNAPSHOT</version>
     </parent>
 
-    <artifactId>simple-hospital-interface</artifactId>
+    <artifactId>sh-interface</artifactId>
+    <name>simple-hospital-interface</name>
     <version>1.0-SNAPSHOT</version>
 
     <properties>

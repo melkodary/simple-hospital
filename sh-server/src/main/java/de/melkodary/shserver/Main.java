@@ -1,4 +1,4 @@
-package de.melkodary;
+package de.melkodary.shserver;
 
 public class Main {
     public static void main(String[] args) {
