@@ -6,14 +6,18 @@ import de.melkodary.shserver.model.Patient;
 import de.melkodary.shserver.service.HospitalService;
 import de.melkodary.shserver.service.PatientService;
 import io.grpc.stub.StreamObserver;
-import lombok.RequiredArgsConstructor;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
 
 import java.util.List;
 
-@RequiredArgsConstructor
+@Component
 public class HospitalGrpcImpl extends HospitalServiceGrpc.HospitalServiceImplBase {
-    private final HospitalService hospitalService;
-    private final PatientService patientService;
+
+    @Autowired
+    private HospitalService hospitalService;
+    @Autowired
+    private PatientService patientService;
 
     @Override
     public void createHospital(HospitalRequest request, StreamObserver<HospitalResponse> responseObserver) {
