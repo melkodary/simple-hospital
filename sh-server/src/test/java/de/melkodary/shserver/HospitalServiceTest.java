@@ -24,7 +24,7 @@ public class HospitalServiceTest {
 
     @Test
     public void getHospitalByIdTest() {
-        Hospital hospital = hospitalService.getHospital(1L);
+        Hospital hospital = hospitalService.getHospital(10L);
         assertEquals("h1", hospital.getName());
     }
 }
