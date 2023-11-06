@@ -6,12 +6,12 @@ import de.melkodary.shserver.model.Patient;
 import de.melkodary.shserver.service.HospitalService;
 import de.melkodary.shserver.service.PatientService;
 import io.grpc.stub.StreamObserver;
+import net.devh.boot.grpc.server.service.GrpcService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Component;
 
 import java.util.List;
 
-@Component
+@GrpcService
 public class HospitalGrpcImpl extends HospitalServiceGrpc.HospitalServiceImplBase {
 
     @Autowired
