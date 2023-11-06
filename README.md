@@ -20,7 +20,7 @@ It is a multi-module project containing:
 
 ### Installation
 
-Run `mvn -pl sh-interface,sh-server clean install`
+Run `mvn clean package`
 
 
 ## FAQ
